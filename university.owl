@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/gabriel-lucas/ontology101/university.owl#"
+     xml:base="https://github.com/gabriel-lucas/ontology101/university.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#studies -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#studies">
+        <rdfs:domain rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Student"/>
+        <rdfs:range rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#teaches -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#teaches">
+        <rdfs:domain rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Lecturer"/>
+        <rdfs:range rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#first_name -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#first_name">
+        <rdfs:domain rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#last_name -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#last_name">
+        <rdfs:domain rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#staff_id -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#staff_id">
+        <rdfs:domain rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#student_id -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#student_id">
+        <rdfs:domain rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#CSModule -->
+
+    <owl:Class rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#CSModule">
+        <rdfs:subClassOf rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Module"/>
+        <owl:disjointWith rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#MathModule"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#Lecturer -->
+
+    <owl:Class rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#Lecturer">
+        <rdfs:subClassOf rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#MathModule -->
+
+    <owl:Class rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#MathModule">
+        <rdfs:subClassOf rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#Module -->
+
+    <owl:Class rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#Module"/>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#Person -->
+
+    <owl:Class rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#Person"/>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#Student -->
+
+    <owl:Class rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#Student">
+        <rdfs:subClassOf rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#CS412 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#CS412">
+        <rdf:type rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#CS413 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#CS413">
+        <rdf:type rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#Lecturer1">
+        <rdf:type rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Lecturer"/>
+        <teaches rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#CS412"/>
+        <teaches rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#MOD1"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyan</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</last_name>
+        <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10001</staff_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#Lecturer2">
+        <rdf:type rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#Lecturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#MOD1 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#MOD1">
+        <rdf:type rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#MathModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#MOD2 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#MOD2">
+        <rdf:type rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#MathModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#Student1 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#Student1">
+        <studies rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#CS412"/>
+        <studies rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#CS413"/>
+        <studies rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#MOD1"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Macron</last_name>
+        <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20001</student_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#Student2 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#Student2">
+        <studies rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#CS412"/>
+        <studies rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#MOD1"/>
+        <studies rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#MOD2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/gabriel-lucas/ontology101/university.owl#Student3 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/gabriel-lucas/ontology101/university.owl#Student3">
+        <studies rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#CS412"/>
+        <studies rdf:resource="https://github.com/gabriel-lucas/ontology101/university.owl#MOD2"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jane</first_name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
